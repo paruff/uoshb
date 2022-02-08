@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.provision "shell", inline: "echo Hello"
+  config.vm.provision "shell", inline: "curl -sSL https://websploit.org/install.sh | sudo bash"
 
   config.vm.define "webspliot" do |webspliot|
      webspliot.vm.box = "kalilinux/rolling"
